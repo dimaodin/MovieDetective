@@ -1,0 +1,136 @@
+.innerMovies {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  div[class^='slick-list'] {
+    padding: 0 20px;
+  }
+
+  .card__movie {
+    width: 230px;
+    cursor: pointer;
+    @media only screen and (max-width: 600px) {   
+      margin-left: 5%;
+    }
+
+    & + .card__movie {
+      margin-left: 2rem;
+    }
+
+    .image__movie {
+      position: relative;
+      width: 230px;
+
+      .image__img {
+        border-radius: 25px;
+        width: 100% !important;
+      }
+
+      .image__overlay {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba( 0, 0, 0, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+        backdrop-filter: blur( 5.0px );
+        -webkit-backdrop-filter: blur( 5.0px );
+        border-radius: 25px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: opacity 0.2s;
+        & > * {
+          transition: transform 0.2s;
+        }
+
+        &:hover > * {
+          transform: translateY(20px);
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+
+        .image__rating {
+          margin-top: 3rem;
+          svg {
+            width: 25px;
+            & path {
+              fill: #FDD10C;
+            }
+          }
+          h4 {
+            font-weight: normal;
+            font-size: 1.5rem;
+
+          }
+        }
+
+        .button__details {
+          cursor: pointer;
+          color: var(--white);
+          background: var(--tertiary-color);
+          padding: 8px 16px;
+          border-radius: 25px;
+          margin-top: 30px;
+          transition: ease 0.2s;
+
+          &:hover {
+            text-decoration: none;
+            filter: brightness(0.9);
+            transform: translateY(20px);
+            opacity: 1;
+          }
+        }
+
+        .image__genre h4 {
+          font-size: 1.8rem;
+          font-weight: normal;
+          &:first-child {
+            margin-top: 15px;
+          }
+          & + h4 {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .title_year_container {
+      direction: rtl;
+      padding: .5rem;
+      margin-top: .5rem;
+      display: block;
+    }
+
+    .movie__title {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      font-weight: 400;
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .movie__year {
+      font-weight: 300;
+      font-size: 1rem;
+      &::before{
+        content: "שנת יציאה: ";
+        color: var(--tertiary-color);
+      }
+    }
+  }
+}
+
+.noSimilarMovies {
+  text-align: center;
+  padding: 2rem 0rem;
+}

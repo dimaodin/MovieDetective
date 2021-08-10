@@ -1,0 +1,191 @@
+.carouselContainer {
+    position: relative;
+    height: auto;
+    cursor: grab;
+
+    div[class^="slick-slider"] {
+
+      div[class^="slick-list"] {
+
+        div[class^="slick-track"] {
+
+          div[data-index] {
+
+            &:before {
+              position: absolute;
+              z-index: 1;
+              content: '';
+              bottom: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background: radial-gradient(ellipse at center,transparent 65%,#000 100%);
+            }
+
+            &:after {
+              position: absolute;
+              z-index: 1;
+              content: "";
+              bottom: 0;
+              width: 100%;
+              height: 150px;
+              background-color: rgba(2,9,22,0);
+              background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(22, 2, 2, 0)),to(rgb(20, 20, 20)));
+            }
+
+            .infoContainer {
+              position: absolute;
+              float: right;
+              right: 0;
+            }
+
+            .info {
+              direction: rtl;
+              position: absolute;
+              bottom: 5rem;
+              padding: 2rem 1rem 1.5rem;
+              background: rgba(0, 0, 0, 0.466);
+              box-shadow: 0 8px 32px 0 rgba(133, 19, 19, 0.37);
+              backdrop-filter: blur( 14px );
+              -webkit-backdrop-filter: blur( 14px );
+              border: 1px solid rgba( 255, 255, 255, 0.18 );
+              border-radius: 25px;
+              margin-bottom: 10rem; 
+              margin-left: 30rem;
+              max-width: 40rem;
+              height: 50%;
+              z-index: 10;
+
+              @media only screen and (max-width: 600px) {
+                max-width: 20rem;
+                max-height: 25rem;
+                margin-left: 5rem;
+              }
+
+              .title {
+                font-size: 4.5rem;
+                @media only screen and (max-width: 600px) {
+                  font-size: 3rem;
+
+                }
+              }
+        
+              .meta {
+                margin-top: .5rem;
+                font-weight: normal;
+                ul {
+                  list-style-type: none;
+                  display: flex;
+                  @media only screen and (max-width: 600px) {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    text-align: center;
+
+                    li {
+                      margin-right: 15px;
+                    }
+                  }
+
+                  li:first-child {
+                    display: flex;
+                    margin-left: 1rem;
+                    font-weight: 700;
+                  }
+  
+                  li {
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                  }
+  
+                  li + li {
+                    margin-left: 15px;
+                    @media only screen and (max-width: 600px) {
+                      margin-left: unset;
+                    }
+                  }
+                }
+
+                svg {
+                  width: 12px;
+                  display: inline-flex;
+                  align-items: center;
+                  margin-left: 3px;
+                  & path {
+                    fill: #fff;
+                  }
+                }
+                
+                p {
+                  font-weight: normal;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 4;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+
+              }
+
+              p {
+                margin-top: 20px;
+                white-space: pre-line;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+              
+              a {
+                z-index: 10;
+                cursor: pointer;
+                padding: .5rem 2rem;
+                text-decoration: none;
+                text-align: center;
+                font-family: Karantina, sans-serif;
+                font-size: 2rem;
+                font-weight: 500;
+                background: rgba(0, 0, 0, 0.596);
+                box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+                backdrop-filter: blur( 20.0px );
+                -webkit-backdrop-filter: blur( 20.0px );
+                border-radius: 25px;
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+                color: var(--white);
+                margin-top: 2rem;
+                position: absolute;
+                transition: .3s ease;
+                &:hover {
+                  background: var(--tertiary-color);
+                  color: #fff;
+                }
+              }
+            }
+
+            img {
+              height: 45rem;
+              width: 100%;
+              object-fit: cover;
+              object-position: 0px 10%;
+              position: relative;
+              @media only screen and (max-width: 600px) {
+                object-position: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    button[class^='slick-arrow slick-prev'],
+    button[class^='slick-arrow slick-next'] {
+      display: none!important;
+      opacity: 0;
+      &:before {
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+
+// responsiveness 
+
+
+

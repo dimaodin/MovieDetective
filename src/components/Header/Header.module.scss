@@ -1,0 +1,132 @@
+.headerContainer {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 3rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  @media only screen and (max-width: 600px) {      
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+  }
+  .logo {
+    text-align: center;
+    cursor: pointer;
+    padding-right: 2rem;
+    
+    @media only screen and (max-width: 600px) {      
+      padding: 2.5rem;
+      margin-right: 3.5rem;
+    }
+
+    svg {
+      width: 110px;
+      cursor: pointer;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .searchBox {
+    position: relative;
+    padding: 0px 30px;
+    @media only screen and (max-width: 600px) {      
+      position: unset;
+      padding:unset;
+    }
+
+    .searchInput {
+      width: 0px;
+      height: 2.5rem;
+      color: #fff;
+      border: 0;
+      border-radius: 25px;
+      background: rgba(150, 150, 150, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+      backdrop-filter: blur( 8.0px );
+      -webkit-backdrop-filter: blur( 8.0px );
+      transition: .3s ease;
+      @media only screen and (max-width: 600px) {      
+        background: rgba(255,255,255,.8);
+        color: #000;
+      }
+
+      &::placeholder {
+        color: #fff;
+        opacity: 0.8;
+        @media only screen and (max-width: 600px) {   
+          color: #000;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .searchBtn {
+      width: 40px;
+      height: 40px;
+      border: 0;
+      border-radius: 25%;
+      background: var(--tertiary-color);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: .3s ease;
+
+      svg {
+        padding: 10px;
+        width: inherit;
+        display: flex;
+        & path {
+          transition: .3s ease;
+          fill: var(--white);
+        }
+      }
+    }
+
+    &:hover > .searchInput {
+      width: 350px;
+      padding: 1rem;
+      @media only screen and (max-width: 600px) {      
+        position: absolute;
+        width: 95%;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &:hover > .searchBtn {
+      background: var(--white);
+      svg path {
+        fill: var(--tertiary-color);
+      }
+    }
+
+  }
+
+  #current_date {
+    margin-right: 2rem;
+    text-transform: capitalize;
+    @media only screen and (max-width: 600px) {      
+      display: none;
+    }
+  }
+}
