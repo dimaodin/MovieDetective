@@ -11,7 +11,7 @@ img {
 
 :root {
   --white: #fff;
-  --primary-color: #8b8b8b;
+  --primary-color: #383838;
   --secondary-color: #191c1f;
   --tertiary-color: #E50914;
 }
@@ -86,7 +86,7 @@ button, a {
     border-radius: 15px;
 
     &:hover {
-      background: #444;
+      background: var(--tertiary-color);
     }
   }
 }
