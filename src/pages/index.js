@@ -35,7 +35,7 @@ export default function Home({ slideMoviesList, trendingMoviesList, responseTest
         <>
           <Carousel el={slideMoviesList} />
           <MoviesList 
-            title="פופולארי היום" 
+            title="פופולרי היום" 
             movieList={trendingMoviesList} 
           />
         </>
