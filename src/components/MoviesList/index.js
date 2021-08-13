@@ -45,7 +45,7 @@ export default function MoviesList({ title, movieList }) {
                             />
                           </svg>
                         </i>
-                        <h4>{movie.rating != 0 ? movie.rating : '?' } / 10</h4>
+                        <h4>10 / {movie.rating != 0 ? movie.rating : '?' }</h4>
                       </div>
 
                       <div className={styles.image__genre}>

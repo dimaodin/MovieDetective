@@ -154,7 +154,7 @@ export async function getStaticProps(ctx) {
   
   const responseVideo = await api.get(`movie/${movie.id}/videos`, {
     params: {
-      language: 'pt-BR',
+      language: 'en-US',
     }
   });
 
@@ -173,7 +173,7 @@ export async function getStaticProps(ctx) {
     runtime: formatToHoursAndMinutes(response.data.runtime),
   }
 
-  let lastFive = responseCredits.data.cast.slice(0, 6);
+  let lastFive = responseCredits.data.cast.slice(0, 9);
   let director = responseCredits.data.crew.find(el => el.department === 'Directing');
 
   const movieCast = {

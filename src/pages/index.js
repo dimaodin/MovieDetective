@@ -35,7 +35,7 @@ export default function Home({ slideMoviesList, trendingMoviesList, responseTest
         <>
           <Carousel el={slideMoviesList} />
           <MoviesList 
-            title="פופולרי היום" 
+            title="פופולרי השבוע" 
             movieList={trendingMoviesList} 
           />
         </>
@@ -69,7 +69,7 @@ export const getServerSideProps = async () => {
         description: movie.overview,
       };
     })
-    .slice(0, 10);
+    .slice(0, 12);
 
   const trendingMoviesList = trending.data.results.map((movie) => {
     return {

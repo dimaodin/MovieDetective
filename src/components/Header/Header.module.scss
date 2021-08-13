@@ -50,13 +50,13 @@
       letter-spacing: .5px;
       border: 0;
       border-radius: 25px;
-      background: rgba(150, 150, 150, 0.25);
+      background: rgba(150, 150, 150, 0.788);
       box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
       backdrop-filter: blur( 8.0px );
       -webkit-backdrop-filter: blur( 8.0px );
       transition: .3s ease;
       @media only screen and (max-width: 600px) {      
-        background: rgba(255,255,255,.8);
+        background: rgb(255, 255, 255);
         color: #000;
       }
 

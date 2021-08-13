@@ -114,6 +114,9 @@
       font-size: 2rem;
       letter-spacing: 1px;
       font-weight: 400;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
       max-width: 100%;
       white-space: nowrap;
       overflow: hidden;
