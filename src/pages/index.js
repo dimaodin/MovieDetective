@@ -21,7 +21,7 @@ export default function Home({ slideMoviesList, trendingMoviesList, responseTest
   return (
     <>
       <Head>
-        <title>חוקר הסרטים | Movie Detective</title>
+        <title>חוקר הסרטים - Movie Detective</title>
       </Head>
 
       {isSearched && searchedMoviesList ? (

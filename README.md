@@ -8,9 +8,7 @@
 
 <br>
 
-## :rocket: Preview
-
-SOON
+### [:rocket: Live View :rocket:](https://movie-detective.vercel.app/)
 
 <br>
 
